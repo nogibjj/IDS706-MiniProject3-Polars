@@ -1,53 +1,60 @@
 [![CI](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-template/actions/workflows/cicd.yml)
 
-# Template for IDS706 weekly mini-projects 
+# Polars Descriptive Statistics Script
 
 ## Goal
 
-This is a repo template for duke course IDS706 Data Engineering Mini Project (Fall 2023). It contains:
+> Duke University IDS 706 Weekly Mini Project 3
 
-`.devcontainer` includes a Dockerfile and devcontainer.json. The 'Dockerfile' within this folder specifies how the container should be built, and other settings in this directory may control development environment configurations.
-
-`workflows` includes GitHub Actions, which contain configuration files for setting up automated build, test, and deployment pipelines for your project.
-
-`.gitignore` is used to specify which files or directories should be excluded from version control when using Git.
-
-`Makefile` is a configuration file used in Unix-based systems for automating tasks and building software. It contains instructions and dependencies for compiling code, running tests, and other development tasks.
-
-`requirements.txt` is to specify the Python package dependencies (libraries and packages).
-
-`test_main.py` is a test file for main.py that can successfully run in IDEs.
-
-`Github Actions` to run the Makefile as follows: make install, make test, make format, make lint.
-
-
-
+This project is:
+-  Python script using Polars for descriptive statistics
+-  Read a dataset (CSV or Excel)
+-  Generate summary statistics (mean, median, standard deviation)
+-  Create at least one data visualization
 
 ## Preparation
 
-1. Open in the Github codespaces
-2. Do simple test in the terminal
+1. make sure a data.csv file is in the same directory as main.py
+2. Python 3.0.0 or above
+3. Polars
+4. matplotlib.pyplot 
+5. The dataset file is as follow:
+
+![img.png](img/img.png)
 
 ## Run and Result
 
-This section is saved for later mini projects.
-🌰 Example in the Github Codespace 
+### Run
+use
+`python main.py`
 
-make format
+Upon running the script, it will display the mean, median, and standard deviation of the dataset. Then, a bar chart showing the Salary distribution will be displayed using matplotlib.
 
-![Make Formate Img](image.png)
+### Result
 
+To show correctly reading the dataset, I use the head() function to display the first 5 rows of the dataset
 
-make lint
+![img_1.png](img/img_1.png)
 
-![Lint Test](image-1.png)
+Further, I display the basic statistics of the dataset and three summary of statistics
 
-make test
+![img_2.png](img/img_2.png)
 
-![Test Result](image-2.png)
+In additon, the median is calculated and displayed as follow:
+
+![img_3.png](img/img_3.png)
+
+For the data visualization, The bar chart titled "Average Score by Age" presents the scores associated with different age groups.
+
+![img_4.png](img/img_4.png)
+
+### Test
+
+use 
+`make test` or `python test_main.py` to test the script
+
+![img.png](img/img_5.png)
 
 ## Reference
 
 1.  https://github.com/nogibjj/python-template
-2.  https://github.com/helenyjx/Rust-Powered-Calculator-Microservice-in-the-Cloud
-
